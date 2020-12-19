@@ -13,6 +13,12 @@ from django.template.loader import get_template
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404, JsonResponse
 
+# pdf generation
+from io import BytesIO
+from django.http import HttpResponse
+from datetime import datetime
+from xhtml2pdf import pisa
+
 def contact(request):
     data = {}
     form = ContactForm(request.POST or None)
@@ -214,3 +220,28 @@ def change_order_count(request, order_id):
             result['status'] = 'ok'
             result['new_number'] = current_order_number
     return JsonResponse(result)
+
+def render_to_pdf(template_src, context_dict={}):
+    template = get_template(template_src)
+    html = template.render(context_dict)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
+
+
+def get_pdf(request):
+    orders = Order.objects.filter(customer=request.user)
+    total_cost = 0
+    for order in orders:
+        total_cost += (order.count * order.merchan.cost)
+
+
+    context = {
+        'orders': orders,
+        'total_price': total_cost
+    }
+
+    pdf = render_to_pdf('home/invoice.html', context_dict=context)
+    return HttpResponse(pdf, content_type='application/pdf')

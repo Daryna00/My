@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    table{
+        color: magenta;
+        background-color: darkblue;
+    }
+    tr{
+        height: 50px;
+        text-align: center;
+    }
+</style>
+
+        <table border="2" class="order_table table table-danger table-bordered text-center">
+            <tr>
+                <th width="50%">Product</th>
+                <th width="20%">Count</th>
+                <th width="20%">Price $</th>
+            </tr>
+            {% for order in orders %}
+                <tr class="order_row table-light">
+                    <td>{{ order.merchan.name }}
+                        <button id="delete{{order.merchan.slug}}" class="delete_order text-danger btn btn-outline-warning float-right">x</button></td>
+                    <td>
+                        <span id="decrease{{order.id}}" class="change_merchan_count btn btn-outline-success btn-sm">-</span>
+                        <span class="order_count">{{ order.count}}</span>
+                        <span id="increase{{order.id}}" class="change_merchan_count btn btn-outline-success btn-sm">+</span>
+                    </td>
+                    <td class="order_cost">{{ order.merchan.cost}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+          <p>Total - <span id="total_cost">{{total_cost}}$</span></p>
+
+
+</body>
+</html>

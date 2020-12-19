@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import index, what_is_it, sign_in, register, logout_user, my_page, ajax_reg_login, contact, change_order_count, delete_from_card, add_to_card
+from .views import index, what_is_it, sign_in, register, logout_user, my_page, ajax_reg_login, contact, change_order_count, delete_from_card, add_to_card, get_pdf
 
 
 urlpatterns = [
@@ -15,4 +15,5 @@ urlpatterns = [
     path('add_to_cart/<slug:slug>', add_to_card, name='add_to_card'),
     path('delete_from_card/<slug:slug>', delete_from_card, name='delete_from_card'),
     path('', include('merchan.urls')),
+    path('get_pdf', get_pdf, name='get_pdf'),
     ]
