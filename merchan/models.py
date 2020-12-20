@@ -30,7 +30,7 @@ class Merchandise(models.Model):
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     draft = models.BooleanField(default=False)
     cost = models.IntegerField(default=0)
-    likes = models.ManyToManyField(User, related_name='like_list', null=True, blank=True)
+    likes = models.ManyToManyField(User, related_name='like_list', blank=True)
     slug = models.SlugField(null=True, unique=True, blank=True)
 
     def __str__(self):
