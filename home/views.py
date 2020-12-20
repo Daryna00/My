@@ -16,7 +16,6 @@ from django.http import Http404, JsonResponse
 # pdf generation
 from io import BytesIO
 from django.http import HttpResponse
-from datetime import datetime
 from xhtml2pdf import pisa
 
 def contact(request):
