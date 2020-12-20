@@ -4,6 +4,7 @@ from .views import index, what_is_it, sign_in, register, logout_user, my_page, a
 
 urlpatterns = [
     path('', index, name='homepage'),
+    path('get_pdf', get_pdf, name='get_pdf'),
     path('what_is_it', what_is_it, name='what_is_it'),
     path('login', sign_in, name='login-page'),
     path('register', register, name='register'),
@@ -15,5 +16,4 @@ urlpatterns = [
     path('add_to_cart/<slug:slug>', add_to_card, name='add_to_card'),
     path('delete_from_card/<slug:slug>', delete_from_card, name='delete_from_card'),
     path('', include('merchan.urls')),
-    path('get_pdf', get_pdf, name='get_pdf'),
     ]

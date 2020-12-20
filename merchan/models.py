@@ -29,7 +29,7 @@ class Merchandise(models.Model):
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     draft = models.BooleanField(default=False)
-    cost = models.CharField(max_length=7)
+    cost = models.IntegerField(default=0)
     likes = models.ManyToManyField(User, related_name='like_list', null=True, blank=True)
     slug = models.SlugField(null=True, unique=True, blank=True)
 

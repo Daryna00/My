@@ -225,7 +225,7 @@ def render_to_pdf(template_src, context_dict={}):
     template = get_template(template_src)
     html = template.render(context_dict)
     result = BytesIO()
-    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+    pdf = pisa.pisaDocument(BytesIO(html.encode("utf-8")), result)
     if not pdf.err:
         return HttpResponse(result.getvalue(), content_type='application/pdf')
     return None
@@ -235,12 +235,11 @@ def get_pdf(request):
     orders = Order.objects.filter(customer=request.user)
     total_cost = 0
     for order in orders:
-        total_cost += (order.count * order.merchan.cost)
-
+        total_cost += order.count * order.merchan.cost
 
     context = {
         'orders': orders,
-        'total_price': total_cost
+        'total_cost': total_cost
     }
 
     pdf = render_to_pdf('home/invoice.html', context_dict=context)

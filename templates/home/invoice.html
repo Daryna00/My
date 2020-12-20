@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,8 +8,9 @@
 <body>
 <style>
     table{
-        color: magenta;
-        background-color: darkblue;
+        color: Black;
+        background-color: MintCream;
+        border-radius: 20px;
     }
     tr{
         height: 50px;
@@ -16,7 +18,7 @@
     }
 </style>
 
-        <table border="2" class="order_table table table-danger table-bordered text-center">
+        <table border="2" style="font-size: 18px;" class="order_table table table-danger table-bordered text-center">
             <tr>
                 <th width="50%">Product</th>
                 <th width="20%">Count</th>
@@ -27,15 +29,13 @@
                     <td>{{ order.merchan.name }}
                         <button id="delete{{order.merchan.slug}}" class="delete_order text-danger btn btn-outline-warning float-right">x</button></td>
                     <td>
-                        <span id="decrease{{order.id}}" class="change_merchan_count btn btn-outline-success btn-sm">-</span>
                         <span class="order_count">{{ order.count}}</span>
-                        <span id="increase{{order.id}}" class="change_merchan_count btn btn-outline-success btn-sm">+</span>
                     </td>
                     <td class="order_cost">{{ order.merchan.cost}}</td>
                 </tr>
             {% endfor %}
         </table>
-          <p>Total - <span id="total_cost">{{total_cost}}$</span></p>
+          <p style="font-size: 18px;">Total - <span id="total_cost">{{total_cost}}$</span></p>
 
 
 </body>
