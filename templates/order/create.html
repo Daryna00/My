@@ -108,7 +108,7 @@
 				<div class="contact-section">
 					<div class="row">
 						<div class="col-xl-6">
-							<div class="img"><img src="https://assets.uigarage.net/content/uploads/2019/09/launchscreen_ios_lightroom_uigarage.jpg" width="500" height="880" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></div>
+							<div class="img"><img src="https://assets.uigarage.net/content/uploads/2019/09/launchscreen_ios_lightroom_uigarage.jpg" width="550" height="930" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></div>
 						</div>
 						<div class="col-xl-6">
 							<div class="contact-text-warp">
@@ -117,7 +117,7 @@
 									<p>Для заказа оставте нам свои контактные данные и фотографию пресета который вы хотите.</p>
 								</div>
 								<div id="form_container">
-								<form class="form-group" id="create_order" method="post" action="{% url 'create_order' %}" enctype="multipart/form-data">
+								<form class="contact-form" id="create_order" method="post" action="{% url 'create_order' %}" enctype="multipart/form-data">
                                     {% csrf_token %}
 
                                     {% for field in  order_form %}

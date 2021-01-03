@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
+from django.core.validators import FileExtensionValidator
 
 
 class Product(models.Model):
@@ -20,6 +21,11 @@ class Product(models.Model):
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     draft = models.BooleanField(default=True)
+    file = models.FileField(
+        upload_to='files/',
+        default="",
+        validators=[FileExtensionValidator(allowed_extensions=['pdf', 'zip', 'rar'])]
+    )
     slug = models.SlugField(null=True, blank=True)
 
     def __str__(self):

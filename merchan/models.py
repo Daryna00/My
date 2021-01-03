@@ -3,6 +3,7 @@ from product.models import Product
 from django.contrib.auth.models import User
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
+from django.core.validators import FileExtensionValidator
 
 class Merchandise(models.Model):
     name = models.CharField(max_length=64)
@@ -31,6 +32,11 @@ class Merchandise(models.Model):
     draft = models.BooleanField(default=False)
     cost = models.IntegerField(default=0)
     likes = models.ManyToManyField(User, related_name='like_list', blank=True)
+    file = models.FileField(
+        upload_to='files/',
+        default="",
+        validators=[FileExtensionValidator(allowed_extensions=['pdf', 'zip', 'rar'])]
+    )
     slug = models.SlugField(null=True, unique=True, blank=True)
 
     def __str__(self):

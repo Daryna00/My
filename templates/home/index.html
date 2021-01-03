@@ -90,9 +90,15 @@
             <h1 class="card-merchan__name" style="text-decoration: none; font-family: 'Caveat', cursive; font-size: 18px;">{{merchan.name}}
             </h1>
             <p style="text-decoration: none; font-family: 'Open Sans Condensed', sans-serif; text-align: center; ">
+                {% if user.is_authenticated %}
                 <a href="{% url 'add_to_card' merchan.slug %}" class="card-merchan__cost">
                     {{merchan.cost}}₴
                 </a>
+                {% else %}
+                <a href="{% url 'add_to_card' merchan.slug %}" onclick="return alert('Товар нельзя добавить в корзину без регестрации!')" class="card-merchan__cost">
+                    {{merchan.cost}}₴
+                </a>
+                {% endif %}
             </p>
 
         </div>
