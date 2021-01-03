@@ -23,7 +23,6 @@ def order_detail(request, slug):
         raise Http404
     order = Order.objects.get(slug=slug)
 
-    # Секция со студентами
     data['order'] = order
     return render(request, 'order/details.html', context=data)
 

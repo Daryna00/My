@@ -22,6 +22,7 @@
 {% block content %}
 <h1>Создать Группу:</h1>
 
+<!-- Форма создания нового товара -->
 
 <form class="form-group" id="add_preset" method="post" action="{% url 'add_preset' %}" enctype="multipart/form-data">
     {% csrf_token %}
@@ -30,18 +31,18 @@
 
     {% for field in  merchan_form %}
 
-    <p>
-        {{ field.label_tag }} {{ field }}
-    </p>
+        <p>
+            {{ field.label_tag }} {{ field }}
+        </p>
     {% endfor %}
 
-        <input id="submit" type="submit" value="Send" class="button">
-        <input type="reset" value="Clear" class="button">
+    <input id="submit" type="submit" value="Send" class="button">
+    <input type="reset" value="Clear" class="button">
 
 </form>
-{% if img_obj %}
-  <h3>Succesfully uploaded!</h3>
-  <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
-{% endif %}
+    {% if img_obj %}
+      <h3>Succesfully uploaded!</h3>
+      <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+    {% endif %}
 
 {% endblock content %}

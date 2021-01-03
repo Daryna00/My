@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Merchandise
 from .form import MerchanForm
 from django.http import Http404, JsonResponse
-from django.core.paginator import Paginator
+
 
 
 def merchandise_details(request, product_id: int, slug):

@@ -48,7 +48,7 @@
 
 			</ul>
 			<div class="fab">
-
+	<!-- Кнопка ссылок -->
   <div class="pulse">
       <span class="fab-action-button">
             <i class="fab-action-button__icon"></i>
@@ -117,6 +117,7 @@
 									<p>Для заказа оставте нам свои контактные данные и фотографию пресета который вы хотите.</p>
 								</div>
 								<div id="form_container">
+									<!-- Форма заказа пресетов -->
 								<form class="contact-form" id="create_order" method="post" action="{% url 'create_order' %}" enctype="multipart/form-data">
                                     {% csrf_token %}
 

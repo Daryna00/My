@@ -22,12 +22,17 @@
 
 </head>
 
+    <script  src="static/js/index.js"></script>
+    <script  src="static/js/main.js"></script>
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+
+
 <body>
 
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
 <nav>
 
 
@@ -39,7 +44,7 @@
 			</div>
 			</div>
 
-	<!-- Modal -->
+	<!-- Корзина -->
 	<div id="modal2" class="modal modal--align-top " aria-hidden="true">
 			<div class="modal__content">
                 <h1>   Ваш заказ   </h1>
@@ -74,15 +79,11 @@
 			</div>
 		</div>
 
-	</div>
-    <script  src="static/js/index.js"></script>
-    <script  src="static/js/main.js"></script>
-    <div>
         {% block img_logo %}
  <img alt="preset logo"
             width="12%" src="{% static 'img/124FDB72-7B5A-4EE0-8D61-311AB8B74F7F.jpeg' %}">
         {% endblock img_logo %}
-    </div>
+
 
 
 <div class="name">
@@ -94,6 +95,7 @@
     </div>
 
 </nav>
+    <!-- Main menu -->
 
 <url class="menu">
     <li><a href="{% url 'homepage' %}">Главная страница</a></li>
@@ -140,6 +142,7 @@
 
 
 </body>
+
  <div class="fab">
 
   <div class="pulse">

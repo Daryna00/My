@@ -129,6 +129,7 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+SILENCED_SYSTEM_CHECKS = ['urls.W002', 'security.W019']
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'

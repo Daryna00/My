@@ -15,21 +15,21 @@
 {% endblock title1 %}
 
 {% block content %}
-{% for product in product %}
+    {% for product in product %}
 
-<div class="button" >
-<a href="{% url 'product_detail' product.slug %}">
+        <div class="button" >
+        <a href="{% url 'product_detail' product.slug %}">
 
-    {{ product.id }}. {{ product.name }}
+            {{ product.id }}. {{ product.name }}
 
-</a>
+        </a>
 
 
 
-<a href="{% url 'delete_product' product.slug %}" class="delete_product">X</a>
-<a href="{% url 'update_product' product.slug %}" class="update_product">Edit product</a>
-</div>
+        <a href="{% url 'delete_product' product.slug %}" class="delete_product">X</a>
+        <a href="{% url 'update_product' product.slug %}" class="update_product">Edit product</a>
+        </div>
 
-{% endfor %}
-<a href="{% url 'product_homepage' %}">Назад</a>
+    {% endfor %}
+    <a href="{% url 'product_homepage' %}">Назад</a>
 {% endblock content %}

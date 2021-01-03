@@ -27,9 +27,9 @@
     Form to add product <a href="{% url 'product_homepage' %}">Назад</a>
 
     {% for field in product_form %}
-    <p>
-        {{ field.label_tag }} {{ field }}
-    </p>
+        <p>
+            {{ field.label_tag }} {{ field }}
+        </p>
     {% endfor %}
 
         <input id="submit" type="submit" value="Send" class="button">

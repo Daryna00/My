@@ -118,6 +118,7 @@
 									<p>Напишите нам и мы с радостью вам ответим в ближайшее время.</p>
 								</div>
 								<div id="form_container">
+									<!-- Форма отправки заявки на почту -->
 								<form class="contact-form" action="{% url 'contact' %}" method="post">
 									 {% csrf_token %}
 										{% for field in form %}
