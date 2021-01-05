@@ -75,13 +75,12 @@ img{
 
 
 .container{
+    display: inline-block;
     background: white;
     /*background-color: rgba(11, 33, 11, 10%);*/
 
     width: 800px;
-    min-height: 400px;
     width: 1400px;
-    min-height: 300px;
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
     text-align: center;
@@ -93,6 +92,7 @@ img{
 
 
 .container1{
+    display: inline-block;
     background: white;
     /*background-color: rgba(11, 33, 11, 10%);*/
     color: black;
@@ -106,6 +106,7 @@ img{
 
 }
 .container2{
+    display: inline-block;
     background: white;
     /*background-color: rgba(11, 33, 11, 10%);*/
     color: black;

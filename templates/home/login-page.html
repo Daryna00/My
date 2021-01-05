@@ -4,32 +4,24 @@
 {% block title %}
 Login
 {% endblock title %}
-{% block img_logo %}
 
-<img width="13%" src="{% static 'img/C4500EC1-500E-45F4-A24C-9FDAD8914040.png' %}" style="margin: -100px 15px;" alt="preset logo">
-{% endblock img_logo %}
-
-
-{% block link %}
-{% endblock link %}
-
-{% block content %}
+{% block product %}
 {% csrf_token %}
+
 {{ report }}
 {% if user.is_authenticated %}
-<p>Привет {{ user.username }}!</p>
+<h1>Привет {{ user.username }}!</h1>
 {% else %}
-<p>You are not logged in.</p>
+<h1>You are not logged in.</h1>
 <a href="{% url 'login-page'  %}">Войти в профиль</a>
 {% endif %}
-{% endblock content %}
-<!-- Меню личного кабинета -->
-{% block content1 %}
-    <p>
+<div class="col-xl-10">
+    <div class=" text-right">
+<p>
         <img alt="preset logo"
          src="https://cdn2.sportngin.com/attachments/call_to_action/6111/4201/icon-coaching_large.png"
          width="6%">
-        <a href="{% url 'create_order'  %}">Стол заказов</a>
+        <a href="{% url 'create_order'  %}">Стол ваших заказов</a>
     </p>
     <p>
         <img alt="preset logo"
@@ -43,11 +35,79 @@ Login
          width="6%">
         <a href="{% url 'login-page'  %}">Вопросы и ответы</a>
     </p>
-    <p>
-        <img alt="preset logo"
-         src="https://www.flaticon.com/svg/static/icons/svg/181/181512.svg"
-         width="6%">
-        <a href="{% url 'contact'  %}">Контакты</a>
-    </p>
+    </div>
+    </div>
 
-{% endblock content1 %}
+{% endblock product %}
+{% block comments %}
+    <div class="customer_feedback_area">
+        <div class="container">
+            <div class="row justify-content-center mb-50">
+                <div class="col-xl-9">
+                    <div class="section_title text-center">
+                        <h3>Feedback From Customers</h3>
+                        <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially <br> in the workplace. That’s why it’s crucial that, as women.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="customer_active owl-carousel">
+                        <div class="single_customer d-flex">
+                            <div class="thumb">
+                                <img src="static/img/testmonial/2.png" alt="">
+                            </div>
+                            <div class="customer_meta">
+                                <h3>Adame Nesane</h3>
+                                <span>Chief Customer</span>
+                                <p>You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                        <div class="single_customer d-flex">
+                            <div class="thumb">
+                                <img src="static/img/testmonial/1.png" alt="">
+                            </div>
+                            <div class="customer_meta">
+                                <h3>Adame Nesane</h3>
+                                <span>Chief Customer</span>
+                                <p>You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                        <div class="single_customer d-flex">
+                            <div class="thumb">
+                                <img src="static/img/testmonial/2.png" alt="">
+                            </div>
+                            <div class="customer_meta">
+                                <h3>Adame Nesane</h3>
+                                <span>Chief Customer</span>
+                                <p>You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                        <div class="single_customer d-flex">
+                            <div class="thumb">
+                                <img src="static/img/testmonial/1.png" alt="">
+                            </div>
+                            <div class="customer_meta">
+                                <h3>Adame Nesane</h3>
+                                <span>Chief Customer</span>
+                                <p>You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                        <div class="single_customer d-flex">
+                            <div class="thumb">
+                                <img src="static/img/testmonial/2.png" alt="">
+                            </div>
+                            <div class="customer_meta">
+                                <h3>Adame Nesane</h3>
+                                <span>Chief Customer</span>
+                                <p>You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock comments %}
+<!-- Меню личного кабинета -->
+

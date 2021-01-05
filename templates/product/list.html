@@ -5,16 +5,8 @@
     Категории пресетов
 {% endblock title %}
 
-{% block img_logo %}
-
-<img width="13%" src="{% static 'img/C4500EC1-500E-45F4-A24C-9FDAD8914040.png' %}" style="margin: 30px 15px;" alt="preset logo">
-{% endblock img_logo %}
-
-{% block title1 %}
-
-{% endblock title1 %}
-
-{% block content %}
+{% block product %}
+<link rel="stylesheet" href="{% static 'css/button_menu.css' %}" >
     {% for product in product %}
 
         <div class="button" >
@@ -32,4 +24,4 @@
 
     {% endfor %}
     <a href="{% url 'product_homepage' %}">Назад</a>
-{% endblock content %}
+{% endblock product %}

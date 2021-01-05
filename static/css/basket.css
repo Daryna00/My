@@ -58,6 +58,7 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+   margin: 150px 0px;
 }
 
 .modal__dialog {

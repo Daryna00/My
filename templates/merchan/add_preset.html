@@ -5,21 +5,9 @@
     Создание категории пресетов
 {% endblock title %}
 
-{% block link %}
-    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
-{% endblock link %}
 
-{% block img_logo %}
-
-<img width="13%" src="{% static 'img/C4500EC1-500E-45F4-A24C-9FDAD8914040.png' %}" style="margin: 30px 15px;" alt="preset logo">
-{% endblock img_logo %}
-
-{% block title1 %}
-
-{% endblock title1 %}
-
-
-{% block content %}
+{% block product %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
 <h1>Создать Группу:</h1>
 
 <!-- Форма создания нового товара -->
@@ -45,4 +33,4 @@
       <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
     {% endif %}
 
-{% endblock content %}
+{% endblock product %}
