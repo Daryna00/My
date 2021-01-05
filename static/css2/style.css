@@ -1128,7 +1128,7 @@ h3 {
 
 /* line 147, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a {
-  color: white;
+  color: PaleGoldenrod;
   font-size: 15px;
   text-transform: capitalize;
   font-weight: 500;

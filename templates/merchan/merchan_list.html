@@ -7,7 +7,7 @@
 
 
 {% block product %}
-
+<link rel="stylesheet" href="{% static 'css/button_menu.css' %}" >
     {% for merchan in merchan %}
         <div class="site-btn" >
             <a href="{% url 'detail' merchan.slug %}">

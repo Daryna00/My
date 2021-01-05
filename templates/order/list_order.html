@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Категории пресетов
+{% endblock title %}
+
+{% block product %}
+<link rel="stylesheet" href="{% static 'css/button_menu.css' %}" >
+    {% for order in order %}
+
+        <div class="button" >
+        <a href="{% url 'details_order' order.id %}">
+
+            {{ order.id }}. {{ order.name }}
+
+        </a>
+
+
+
+        </div>
+
+    {% endfor %}
+    <a href="{% url 'product_homepage' %}">Назад</a>
+{% endblock product %}

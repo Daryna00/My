@@ -13,6 +13,7 @@ class Order(models.Model):
     )
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+    draft = models.BooleanField(default=True)
     slug = models.SlugField(null=True, blank=True)
 
     def __str__(self):

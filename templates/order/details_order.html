@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Категории пресетов
+{% endblock title %}
+
+{% block product %}
+<link rel="stylesheet" href="{% static 'css/button_menu.css' %}" >
+    <h1>{{ order.name }}</h1>&emsp;&emsp;&nbsp;
+    <h2>{{  order.email }}</h2>&emsp;&emsp;&nbsp;
+    <div>
+        {% if order.draft %}
+        <td>
+            <img src="/media/{{order.image}}" alt="img" width="50%" >
+        </td>
+    {% endif %}
+    </div>
+    <h3>{{  order.timestamp }}</h3>&emsp;&emsp;&nbsp;
+    <a class="button"  href="{% url 'product_homepage' %}">Назад</a>
+{% endblock product %}

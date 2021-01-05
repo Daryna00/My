@@ -17,18 +17,29 @@ def create_order(request):
         order_form.save()
         return redirect('/product/list')
 
-def order_detail(request, slug):
+
+def delete_order(request, slug):
     data = {}
-    if not Order.objects.filter(slug=slug).exists():
+    if not request.user.is_authenticated or not Order.objects.filter(slug=slug).exists():
         raise Http404
     order = Order.objects.get(slug=slug)
+    if request.method == "GET":
+        data['order'] = order
+        return render(request, 'order/delete_order.html', context=data)
+    elif request.method == "POST":
+        order.delete()
+        return redirect('/product/list')
 
+def order_detail(request, id: int):
+    data = {}
+
+    order = Order.objects.get(id=id)
     data['order'] = order
-    return render(request, 'order/details.html', context=data)
+    return render(request, 'order/details_order.html', data)
 
 
 def order_list(request):
     data = {}
     all_order = Order.objects.all()
     data['order'] = all_order
-    return render(request, 'order/list.html', context=data)
+    return render(request, 'order/list_order.html', context=data)
