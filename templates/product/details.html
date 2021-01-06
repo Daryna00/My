@@ -104,9 +104,6 @@
 			</div>
 			<!-- Left Side section end -->
 			<!-- Page start -->
-			<div class="site-btn"  style="margin: 0px 1100px; font-size: 15px; width: 250px;" >
-				<a href="/media/{{product.file}}" style="color: black;" download>Скачать пакет пресетов</a>
-				</div>
 			<div class="page-section about-page">
 				<div class="about-section">
                        {% if product.draft %}
@@ -122,12 +119,15 @@
                                 {%for merchan in merchan %}
 								{% if merchan.draft %}
 								   <td>
-									<a href="http://127.0.0.1:8000/product/merchan/{{ merchan.slug }}/detail"><img src="/media/{{merchan.after_img}}" alt="img" width="20%" ></a>
+									<a href="http://127.0.0.1:8000/%2Fmerchan/merchan/{{ merchan.slug }}/detail"><img src="/media/{{merchan.after_img}}" alt="img" width="20%" ></a>
 									</td>
 								   {% endif %}
 
 								{% endfor %}
                         </div>
+						<div class="site-btn"  style="margin: 0px 1100px; font-size: 15px; width: 250px;" >
+				<a href="/media/{{product.file}}" style="color: black;" download>Скачать пакет пресетов</a>
+				</div>
 					</div>
 				</div>
 			</div>
