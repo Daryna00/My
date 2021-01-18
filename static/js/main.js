@@ -206,7 +206,7 @@ $(window).on('load', function() {
 		}
 
 });
-});
+})(jQuery);
 $('#main-product').click(function () {
   console.log('aria clicked')
   let checkbox_list = $('.checkbox-category:checked').toArray()
