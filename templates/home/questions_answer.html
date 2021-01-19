@@ -83,7 +83,6 @@
         </li>
       </ul>
     </div>
-		</div>
 		<header class="header-section">
 			<div class="nav-switch">
 				<i class="fa fa-bars"></i>
@@ -93,7 +92,7 @@
 			<!-- Left Side section -->
 			<div class="main-sidebar">
 				<div class="mb-warp">
-					<a href="index.html" class="site-logo">
+					<a  class="site-logo">
 						<h2>MY PRESET</h2>
 						<p>Магазин пресетов</p>
 					</a>
@@ -111,40 +110,51 @@
 			</div>
 			<!-- Left Side section end -->
 			<!-- Page start -->
-			<div class="page-section contact-page">
-				<div class="contact-section">
-					<div class="row">
-						<div class="col-xl-6">
-							<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.6461901983785!2d30.53315811589603!3d50.447690595444534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfad3a074235%3A0x75d393174e3ab713!2z0YPQuy4g0JzQuNGF0LDQuNC70LAg0JPRgNGD0YjQtdCy0YHQutC-0LPQviwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1606231711738!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+			<div class="page-section blog-page">
+				<div class="blog-posts">
+					<div class="blog-post-item">
+						<div class="blog-thumb set-bg" data-setbg="{% static 'img/lightroom-import-preset_03.jpg' %}">
 						</div>
-						<div class="col-xl-6">
-							<div class="contact-text-warp">
-								<div class="contact-text">
-									<h2>Есть вопросы?</h2>
-									<p>Напишите нам и мы с радостью вам ответим в ближайшее время.</p>
-								</div>
-								<div id="form_container">
-									<!-- Форма отправки заявки на почту -->
-								<form class="contact-form" action="{% url 'contact' %}" method="post">
-									 {% csrf_token %}
-										{% for field in form %}
-											{{field.label}} {{ field }} <br>
-										{% endfor %}
-										<div class="col-lg-12">
-											<button id="submit" type="submit" class="site-btn">Отправить сообщение</button>
-										</div>
-								</form>
-								</div>
-							</div>
+						<div class="blog-content">
+							<h2><a href="./single-blog.html">Как установить пресеты в лайтрум</a></h2>
+							<h3>1. Перетащить файл пресета в программу.</h3>
+							<p> Самый простой способ — перетащить один или несколько файлов с пресетами прямо на рабочее окно лайтрума. После этого их сразу можно использовать. </p>
+							<h3>2. Импорт </h3>
+							<p> Кликните правой кнопкой мыши в окне Presets модуля Develop и выберите Import. Выберите файл пресета, и он добавится.</p>
+							<h3>3. Работа с папками</h3>
+							<p>Это самый удобный, но долгий способ организовать свои пресеты. В меню Edit (Win) или Lightroom (Mac) выберите Preferences.</p>
+							<p>Зайдите во вкладку Presets и нажмите кнопку Show Lightroom Presets Folder…</p>
+							<p>Откроется папка с пресетами. Выберите Develop Presets, внутри вы найдете папку User Presets, в которой находятся добавленные вами пресеты.</p>
+
+						</div>
+					</div>
+					<div class="blog-post-item">
+						<div class="blog-thumb set-bg" data-setbg="https://www.onfoto.ru/news/images/Software/18-10-16-adobe-predstavila-novyy-lightroom-cc-2-0/1.jpg">
+						</div>
+						<div class="blog-content">
+							<h2>Как удалить пресет из Lightroom</h2>
+							<p>Кликнуть правой кнопкой мыши на неугодном пресете и выбрать Delete. Если случайно удалили не тот пресет — жмите Ctrl+Z (Win) или Cmd+Z (Mac), и действие отменится.</p>
+							<p>Зайти в папки и удалить всё через файловую систему.</p>
+						</div>
+					</div>
+					<div class="blog-post-item">
+						<div class="blog-thumb set-bg" data-setbg="{% static 'img/kak-polyzovatsa-presetom-lightroom3_thumb.jpg' %}">
+						</div>
+						<div class="blog-content">
+							<h2>Как пользоваться пресетами в Lightroom</h2>
+							<p>Открываем нашу фотографию в лайтруме и переходим во вкладку “Коррекции”.</p>
+							<p>Слева от нашей фотографии Вы должны видеть меню. Там же есть такой спойлер как “Параметры пресетов”. Раскрываем его.</p>
+							<p>И вот, перед нами список наших установленных пресетов. Попробуйте навести на название пресета, в маленьком окошке Вы сможете увидеть результат ПОСЛЕ использования пресета. Если же Вы хотите воспользоваться пресетом, то просто нажмите один раз левой кнопкой мышки на название пресета.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- Page end -->
 		</div>
-
 	</div>
 	<!-- Main section end -->
+
+
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="static/js/jquery-3.2.1.min.js"></script>

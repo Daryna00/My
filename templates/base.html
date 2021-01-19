@@ -138,8 +138,9 @@
                             <td>{{ order.merchan.name }}
                                 <button id="delete{{order.merchan.slug}}" class="delete_order text-danger line_btn btn btn-outline-warning float-right">x</button></td>
                             <td>
-                                <button id="decrease{{order.id}}" class="change_merchan_count line_btn">-</button>
+                                <span id="decrease{{order.id}}" class="change_product_count btn btn-outline-success btn-sm">-</span>
                                 <span class="order_count">{{ order.count}}</span>
+                                <span id="increase{{order.id}}" class="change_product_count btn btn-outline-success btn-sm">+</span>
                             </td>
                             <td class="order_cost">{{ order.merchan.cost}}
                             </td>
@@ -213,17 +214,17 @@
           </a>
         </li>
         <li class="fab-buttons__item">
-          <a href="#" class="fab-buttons__link" data-tooltip="Twitter">
+          <a href="https://www.facebook.com/dasha.denderuk" class="fab-buttons__link" data-tooltip="Facebook">
             <i class="icon-material icon-material_tw"></i>
           </a>
         </li>
         <li class="fab-buttons__item">
-          <a href="#" class="fab-buttons__link" data-tooltip="Linkedin">
+          <a href="http://linkedin.com/in/даша-дендерук-644a8219a" class="fab-buttons__link" data-tooltip="Linkedin">
             <i class="icon-material icon-material_li"></i>
           </a>
         </li>
         <li class="fab-buttons__item">
-          <a href="#" class="fab-buttons__link" data-tooltip="Google+">
+          <a href="https://www.google.com.ua/?hl=ru" class="fab-buttons__link" data-tooltip="Google">
             <i class="icon-material icon-material_gp"></i>
           </a>
         </li>
@@ -239,7 +240,7 @@
 
                             <p class="copy_right">
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
 

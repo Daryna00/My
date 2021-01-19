@@ -285,6 +285,7 @@ $(".delete_order").click(function () {
 
 })
 
+
 function searchToggle(obj, evt){
     var container = $(obj).closest('.search-wrapper');
         if(!container.hasClass('active')){

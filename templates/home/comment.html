@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Comment
+{% endblock title %}
+
+{% block product %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+<!-- Форма создания нового товара -->
+
+<form class="contact-form" id="comment" method="post" action="{% url 'comment' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h1>Написать коментарий</h1>
+    {% for field in  comment_form %}
+
+        <p>
+            {{ field.label_tag }} {{ field }}
+        </p>
+    {% endfor %}
+
+    <input id="submit" type="submit" value="Send" class="button">
+    <input type="reset" value="Clear" class="button">
+    <a href="{% url 'homepage' %}">Назад</a>
+
+</form>
+
+{% endblock product %}
+
