@@ -136,11 +136,11 @@
                     {% for order in orders %}
                         <tr class="order_row table-light">
                             <td>{{ order.merchan.name }}
-                                <button id="delete{{order.merchan.slug}}" class="delete_order text-danger line_btn btn btn-outline-warning float-right">x</button></td>
+                                <button id="delete{{order.merchan.slug}}" class="delete_order text-danger line_btn2 btn btn-outline-warning float-right">x</button></td>
                             <td>
-                                <span id="decrease{{order.id}}" class="change_product_count btn btn-outline-success btn-sm">-</span>
+                                <button id="decrease{{order.id}}" class="change_merchan_count line_btn2">-</button>
                                 <span class="order_count">{{ order.count}}</span>
-                                <span id="increase{{order.id}}" class="change_product_count btn btn-outline-success btn-sm">+</span>
+                                <button id="increase{{order.id}}" class="change_merchan_count line_btn2">+</button>
                             </td>
                             <td class="order_cost">{{ order.merchan.cost}}
                             </td>
