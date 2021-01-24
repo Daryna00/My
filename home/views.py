@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-"""from .forms import ContactForm, CommentForm"""
+from .forms import ContactForm
 from merchan.models import Merchandise
 from product.models import Product
 from .models import Order
