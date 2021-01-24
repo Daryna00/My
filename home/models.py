@@ -2,7 +2,7 @@ from django.db import models
 from merchan.models import Merchandise
 from django.contrib.auth.models import User
 
-
+"""
 class Comment(models.Model):
     name = models.CharField(max_length=150)
     text = models.TextField(max_length=2048)
@@ -12,7 +12,7 @@ class Comment(models.Model):
         return f'Comment- {self.name}'
 
     class Meta:
-        ordering = ['-timestamp', '-updated']
+        ordering = ['-timestamp', '-updated']"""
 
 class Order(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)

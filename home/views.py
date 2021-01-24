@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .forms import ContactForm, CommentForm
+"""from .forms import ContactForm, CommentForm"""
 from merchan.models import Merchandise
 from product.models import Product
 from .models import Order
@@ -88,7 +88,7 @@ def index(request):
 def what_is_it(request):
     return render(request, 'home/what-is-it.html')
 
-def comment_add(request):
+"""def comment_add(request):
     data = {}
     if request.method == "GET":
         comment_form = CommentForm()
@@ -97,7 +97,7 @@ def comment_add(request):
     elif request.method == "POST":
         comment_form = CommentForm(request.POST, request.FILES)
         comment_form.save()
-        return redirect('/')
+        return redirect('/')"""
 
 
 def sign_in(request):
