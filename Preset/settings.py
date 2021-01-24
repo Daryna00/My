@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'j!3jnvs=t5a_b2j-@+hdk2&i_^qsh-@8htr879fif)ze!&4_so'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'my-presets-shop.herokuapp.com']
+ALLOWED_HOSTS = ['my-presets-shop.herokuapp.com']
 
 
 # Application definition
